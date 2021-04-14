@@ -9,7 +9,7 @@
 namespace leclerc {
     struct packet_participants_data {
         packet_header m_header;
-        std::uint8_t m_numActiveCars;
+        uint8_t m_numActiveCars;
         participant_data m_participants[20];
     };
 }

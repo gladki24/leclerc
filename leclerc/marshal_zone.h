@@ -9,7 +9,7 @@
 namespace leclerc {
     struct marshal_zone {
         float m_zoneStart;
-        std::int8_t m_zoneFlag;
+        int8_t m_zoneFlag;
     };
 }
 

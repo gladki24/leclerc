@@ -3,7 +3,6 @@
 //
 
 #ifndef LECLERC_CARMOTIONDATA_H
-#include "./packet_header.h"
 #define LECLERC_CARMOTIONDATA_H
 
 namespace leclerc {
@@ -14,12 +13,12 @@ namespace leclerc {
         float m_worldVelocityX;
         float m_worldVelocityY;
         float m_worldVelocityZ;
-        std::int16_t m_worldForwardDirX;
-        std::int16_t m_worldForwardDirY;
-        std::int16_t m_worldForwardDirZ;
-        std::int16_t m_worldRightDirX;
-        std::int16_t m_worldRightDirY;
-        std::int16_t m_worldRightDirZ;
+        int16_t m_worldForwardDirX;
+        int16_t m_worldForwardDirY;
+        int16_t m_worldForwardDirZ;
+        int16_t m_worldRightDirX;
+        int16_t m_worldRightDirY;
+        int16_t m_worldRightDirZ;
         float m_gForceLateral;
         float m_gForceLongitudinal;
         float m_gForceVertical;
