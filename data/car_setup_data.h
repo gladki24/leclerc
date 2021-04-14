@@ -8,25 +8,25 @@
 
 namespace leclerc {
     struct car_setup_data {
-        std::uint8_t m_frontWing;
-        std::uint8_t m_rearWing;
-        std::uint8_t m_onThrottle;
-        std::uint8_t m_offThrottle;
+        uint8_t m_frontWing;
+        uint8_t m_rearWing;
+        uint8_t m_onThrottle;
+        uint8_t m_offThrottle;
         float m_frontCamber;
         float m_rearCamber;
         float m_frontToe;
         float m_rearToe;
-        std::uint8_t m_frontSuspension;
-        std::uint8_t m_rearSuspension;
-        std::uint8_t m_frontAntiRollBar;
-        std::uint8_t m_rearAntiRollBar;
-        std::uint8_t m_frontSuspensionHeight;
-        std::uint8_t m_rearSuspensionHeight;
-        std::uint8_t m_brakePressure;
-        std::uint8_t m_brakeBias;
+        uint8_t m_frontSuspension;
+        uint8_t m_rearSuspension;
+        uint8_t m_frontAntiRollBar;
+        uint8_t m_rearAntiRollBar;
+        uint8_t m_frontSuspensionHeight;
+        uint8_t m_rearSuspensionHeight;
+        uint8_t m_brakePressure;
+        uint8_t m_brakeBias;
         float m_frontTyrePressure;
         float m_rearTyrePressure;
-        std::uint8_t m_ballast;
+        uint8_t m_ballast;
         float m_fuelLoad;
     };
 }

@@ -9,7 +9,7 @@
 namespace leclerc {
     struct packet_event_data {
         packet_header m_header;
-        std::uint8_t m_eventStringCode[4];
+        uint8_t m_eventStringCode[4];
         event_data_packet m_eventDetails;
     };
 }

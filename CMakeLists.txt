@@ -3,7 +3,7 @@ project(Leclerc)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(
+add_executable(
         Leclerc
         leclerc.h
         leclerc.cpp
@@ -19,11 +19,10 @@ add_library(
         data/packet_car_status_data.h
         data/packet_car_telemetry_data.h
         data/packet_event_data.h
-        data/packet_header.h
         data/packet_id.h
         data/packet_lap_data.h
         data/packet_motion_data.h
         data/packet_participants_data.h
         data/packet_session_data.h
         data/participant_data.h
-)
+        main.cpp)

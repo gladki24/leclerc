@@ -10,7 +10,7 @@ namespace leclerc {
     struct packet_car_telemetry_data {
         packet_header m_header;
         car_telemetry_data m_carTelemetryData[20];
-        std::uint32 m_buttonStatus;
+        uint32_t m_buttonStatus;
     };
 }
 
