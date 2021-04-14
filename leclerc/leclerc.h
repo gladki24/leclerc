@@ -3,7 +3,7 @@
 //
 
 #ifndef LECLERC_LECLERC_H
-#include "data/data.h"
+#include "../data/data.h"
 #define LECLERC_LECLERC_H
 
 #endif //LECLERC_LECLERC_H
