@@ -7,22 +7,22 @@ add_executable(
         Leclerc
         leclerc.h
         leclerc.cpp
-        data/data.h
-        data/car_motion_data.h
-        data/car_setup_data.h
-        data/car_telemetry_data.h
-        data/car_status_data.h
-        data/event_packet.h
-        data/lap_data.h
-        data/marshal_zone.h
-        data/packet_car_setup_data.h
-        data/packet_car_status_data.h
-        data/packet_car_telemetry_data.h
-        data/packet_event_data.h
-        data/packet_id.h
-        data/packet_lap_data.h
-        data/packet_motion_data.h
-        data/packet_participants_data.h
-        data/packet_session_data.h
-        data/participant_data.h
+        leclerc/data.h
+        leclerc/car_motion_data.h
+        leclerc/car_setup_data.h
+        leclerc/car_telemetry_data.h
+        leclerc/car_status_data.h
+        leclerc/event_packet.h
+        leclerc/lap_data.h
+        leclerc/marshal_zone.h
+        leclerc/packet_car_setup_data.h
+        leclerc/packet_car_status_data.h
+        leclerc/packet_car_telemetry_data.h
+        leclerc/packet_event_data.h
+        leclerc/packet_id.h
+        leclerc/packet_lap_data.h
+        leclerc/packet_motion_data.h
+        leclerc/packet_participants_data.h
+        leclerc/packet_session_data.h
+        leclerc/participant_data.h
         main.cpp)
