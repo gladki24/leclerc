@@ -19,6 +19,7 @@ namespace leclerc {
         uint8_t m_revLightsPercent;
         uint16_t m_brakesTemperature[4];
         uint16_t m_tyresSurfaceTemperature[4];
+        uint16_t m_tyresInnerTemperature[4];
         uint16_t m_engineTemperature;
         float m_tyresPressure[4];
         uint8_t m_surfaceType[4];

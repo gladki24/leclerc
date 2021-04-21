@@ -25,4 +25,4 @@ add_executable(
         leclerc/packet_participants_data.h
         leclerc/packet_session_data.h
         leclerc/participant_data.h
-        main.cpp)
+        main.cpp leclerc/leclerc.cpp leclerc/controller.h leclerc/logic.h leclerc/utils.h leclerc/controller.cpp leclerc/packet_handler_factory.cpp leclerc/packet_handler_factory.h leclerc/packet_handler.cpp leclerc/packet_handler.h leclerc/car_telemetry_handler.cpp leclerc/car_telemetry_handler.h leclerc/car_status_handler.cpp leclerc/car_status_handler.h)
