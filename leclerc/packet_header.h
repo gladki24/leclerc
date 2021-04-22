@@ -1,5 +1,5 @@
 #ifndef LECLERC_PACKETHEADER_H
-#include "stdint.h"
+#include <Arduino.h>
 #define LECLERC_PACKETHEADER_H
 
 namespace leclerc {

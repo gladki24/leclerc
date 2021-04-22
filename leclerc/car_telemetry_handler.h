@@ -7,6 +7,7 @@
 #include "packet_handler.h"
 #include "Arduino.h"
 #include "packet_car_telemetry_data.h"
+#include "serial.h"
 
 #define LECLERC_CAR_TELEMETRY_HANDLER_H
 

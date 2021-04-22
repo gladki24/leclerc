@@ -13,18 +13,11 @@ namespace leclerc {
     class packet_handler {
     public:
         packet_handler(WiFiUDP &udp);
-
         virtual ~packet_handler();
-
         virtual void handle() = 0;
 
     protected:
         WiFiUDP &udp;
-
-        template<class TData>
-        void read_data(TData data) {
-            udp.read((char *) &data, sizeof(TData));
-        }
     };
 }
 

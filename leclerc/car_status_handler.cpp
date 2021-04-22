@@ -9,10 +9,15 @@ leclerc::car_status_handler::car_status_handler(WiFiUDP& udp) : packet_handler(u
 leclerc::car_status_handler::~car_status_handler() { }
 
 void leclerc::car_status_handler::handle() {
-    leclerc::packet_car_status_data status;
-    read_data<leclerc::packet_car_status_data>(status);
-    uint16_t version = status.m_header.m_packetFormat;
-    int value = version;
-    Serial.println("Car status: ");
-    Serial.printf("%d", value);
+    leclerc::packet_car_status_data status_packet;
+    udp.read((char*)& status_packet, sizeof(leclerc::packet_car_status_data));
+
+    leclerc::packet_header header = status_packet.m_header;
+
+    Serial.printf("size: %u", sizeof(leclerc::packet_car_status_data));
+    serial::log_header(header);
+
+    leclerc::car_status_data status = status_packet.m_carStatusData[header.m_playerCarIndex];
+    int max_gear = status.m_maxGears;
+    int max_rpm = status.m_maxRPM;
 }
