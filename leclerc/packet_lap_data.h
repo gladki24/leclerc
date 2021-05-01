@@ -9,7 +9,7 @@
 namespace leclerc {
     struct packet_lap_data {
         packet_header m_header;
-        lap_data m_lapData[20];
+//        lap_data m_lapData[20];
     };
 }
 

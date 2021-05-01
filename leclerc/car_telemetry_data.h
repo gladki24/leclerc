@@ -6,6 +6,8 @@
 #include "packet_header.h"
 #define LECLERC_CARTELEMETRYDATA_H
 
+#pragma pack(push, 1)
+
 namespace leclerc {
     struct car_telemetry_data {
         uint16_t m_speed;
@@ -19,10 +21,12 @@ namespace leclerc {
         uint8_t m_revLightsPercent;
         uint16_t m_brakesTemperature[4];
         uint16_t m_tyresSurfaceTemperature[4];
+        uint16_t m_tyresInnerTemperature[4];
         uint16_t m_engineTemperature;
         float m_tyresPressure[4];
         uint8_t m_surfaceType[4];
     };
 }
 
+#pragma pack(pop)
 #endif //LECLERC_CARTELEMETRYDATA_H

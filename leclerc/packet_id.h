@@ -7,14 +7,14 @@
 
 namespace leclerc {
     enum packet_id {
-        Motion,
-        Session,
-        LapData,
-        Event,
-        Participants,
-        CarSetups,
-        CarTelemetry,
-        CarStatus
+        motion = 1343,
+        session = 149,
+        lap_data = 843,
+        event = 32,
+        participants = 1104,
+        car_setups = 843,
+        car_telemetry = 1347,
+        car_status = 1143
     };
 }
 
