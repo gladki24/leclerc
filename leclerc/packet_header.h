@@ -2,6 +2,8 @@
 #include <Arduino.h>
 #define LECLERC_PACKETHEADER_H
 
+#pragma pack(push, 1)
+
 namespace leclerc {
     struct packet_header {
         uint16_t m_packetFormat;
@@ -15,5 +17,7 @@ namespace leclerc {
         uint8_t m_playerCarIndex;
     };
 }
+
+#pragma pack(pop)
 
 #endif //LECLERC_PACKETHEADER_H

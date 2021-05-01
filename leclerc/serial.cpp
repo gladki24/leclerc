@@ -4,7 +4,7 @@
 
 #include "serial.h"
 
-void leclerc::serial::log_header(const leclerc::packet_header &header) {
+void leclerc::log_header(const leclerc::packet_header &header) {
     int packet_format = header.m_packetFormat;
     int major_version = header.m_gameMajorVersion;
     int minor_version = header.m_gameMinorVersion;
@@ -15,7 +15,7 @@ void leclerc::serial::log_header(const leclerc::packet_header &header) {
     int player_index = header.m_playerCarIndex;
 
     Serial.printf(
-            "header - session: %u, format: %d, major: %d, minor: %d, version: %d, id: %d, time: %f, index: %d",
+            "header - format: %d, major: %d, minor: %d, version: %d, id: %d, time: %f, index: %d",
             packet_format,
             major_version,
             minor_version,
@@ -25,4 +25,29 @@ void leclerc::serial::log_header(const leclerc::packet_header &header) {
             player_index
             );
     Serial.println("");
+}
+
+void leclerc::log_status(const leclerc::car_status_data &status) {
+    unsigned int max_rpm = status.m_maxRPM;
+    unsigned int max_gear = status.m_maxGears;
+
+    Serial.printf("max RPM: %u, max gear: %u", max_rpm, max_gear);
+    Serial.println("");
+}
+
+void leclerc::log_telemetry(const leclerc::car_telemetry_data& telemetry) {
+    int gear = telemetry.m_gear;
+    unsigned int rpm = telemetry.m_engineRPM;
+
+    Serial.printf("gear: %i, rpm: %u", gear, rpm);
+    Serial.println("");
+}
+
+void leclerc::log_speed(const leclerc::car_telemetry_data &telemetry) {
+    unsigned int speed = telemetry.m_speed;
+
+    if (speed >= 0 && speed <= 400) {
+        Serial.printf("speed: %u", speed);
+        Serial.println("");
+    }
 }

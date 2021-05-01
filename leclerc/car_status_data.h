@@ -6,6 +6,8 @@
 #include "packet_header.h"
 #define LECLERC_CARSTATUSDATA_H
 
+#pragma pack(push, 1)
+
 namespace leclerc {
     struct car_status_data {
         uint8_t m_tractionControl;
@@ -38,4 +40,5 @@ namespace leclerc {
     };
 }
 
+#pragma pack(pop)
 #endif //LECLERC_CARSTATUSDATA_H

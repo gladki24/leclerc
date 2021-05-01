@@ -11,13 +11,7 @@ leclerc::car_status_handler::~car_status_handler() { }
 void leclerc::car_status_handler::handle() {
     leclerc::packet_car_status_data status_packet;
     udp.read((char*)& status_packet, sizeof(leclerc::packet_car_status_data));
-
-    leclerc::packet_header header = status_packet.m_header;
-
-    Serial.printf("size: %u", sizeof(leclerc::packet_car_status_data));
-    serial::log_header(header);
-
+    leclerc::packet_header& header = status_packet.m_header;
     leclerc::car_status_data status = status_packet.m_carStatusData[header.m_playerCarIndex];
-    int max_gear = status.m_maxGears;
-    int max_rpm = status.m_maxRPM;
+    leclerc::log_status(status);
 }

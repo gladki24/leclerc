@@ -6,6 +6,7 @@
 #include "car_status_data.h"
 #define LECLERC_PACKETCARSTATUSDATA_H
 
+#pragma pack(push, 1)
 namespace leclerc {
     struct packet_car_status_data {
         packet_header m_header;
@@ -13,4 +14,5 @@ namespace leclerc {
     };
 }
 
+#pragma pack(pop)
 #endif //LECLERC_PACKETCARSTATUSDATA_H

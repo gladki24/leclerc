@@ -6,6 +6,8 @@
 #include "packet_header.h"
 #define LECLERC_CARSETUPDATA_H
 
+#pragma pack(push, 1)
+
 namespace leclerc {
     struct car_setup_data {
         uint8_t m_frontWing;
@@ -31,4 +33,5 @@ namespace leclerc {
     };
 }
 
+#pragma pack(pop)
 #endif //LECLERC_CARSETUPDATA_H
