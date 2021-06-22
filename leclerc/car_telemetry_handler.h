@@ -18,7 +18,7 @@ namespace leclerc {
 
         ~car_telemetry_handler();
 
-        void handle() override;
+        leclerc::handle_result handle() override;
     };
 }
 
