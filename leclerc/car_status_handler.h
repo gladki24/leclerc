@@ -18,7 +18,7 @@ namespace leclerc {
 
         ~car_status_handler();
 
-        void handle() override;
+        handle_result handle() override;
     };
 }
 
